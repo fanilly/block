@@ -1,0 +1,107 @@
+@charset "utf-8";
+/*
+Copyright (c) 2009, Shawphy(shawphy.com). All rights reserved.
+http://shawphy.com/2009/03/my-own-reset-css.html
+Based on YUI http://developer.yahoo.com/yui/reset/ 
+and Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html 
+Licensed under the BSD License:
+http://creativecommons.org/licenses/BSD/
+version: 1.1 | 20090303
+*/
+*{
+  /*取消ios链接点击之后的遮罩层*/
+  -webkit-tap-highlight-color: transparent;
+  /*webkit 表单元素默认外观重置*/
+  -webkit-appearance: none;
+  /*-webkit-touch-callout: none; 禁止长按图片后出现下载选项*/
+}
+html {
+  font-size: 62.5%;
+}
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+fieldset, img {
+  border: 0;
+}
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+address, caption, cite, code, dfn, th, var, optgroup {
+  font-style: normal;
+  font-weight: normal;
+}
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+/*default no inherit*/
+input, button, textarea,
+select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th {
+  text-align: left;
+}
+/* remember to highlight anchors and inserts somehow! */
+:link, :visited, ins {
+  text-decoration: none;
+}
+ul, ol {
+  list-style: none;
+}
+/*clear float collapse*/
+.clear-fix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/*prohibit user select*/
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*css3 transition*/
+.slow {
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -ms-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  transition: all ease .5s;
+}
+/*positioned Element middle and center*/
+.middle-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.ps {
+  position: absolute;
+}
+.pr {
+  position: relative;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}

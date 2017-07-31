@@ -1,0 +1,6 @@
+{
+  "images": [
+    { "name": "background", "src": "img/bg.png" },
+    { "name": "cellblock", "src": "img/cellBlock.png" }
+  ]
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/public.css">
+  <link rel="stylesheet" type="text/css" href="css/demo_001(block).css">
+</head>
+
+<body>
+
+  <section id="game_over" class="middle-center no-select">
+    <h1>GAME OVER</h1>
+    <a href="#">RESTART</a>
+  </section>
+
+  <!-- script -->
+  <canvas id="canvas" class="middle-center"></canvas>
+  <script src="js/simpleInheritance.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/FramesUtil.class.js"></script>
+  <script src="js/StaticResource.class.js"></script>
+  <script src="js/ActorManager.class.js"></script>
+  <script src="js/Block.class.js"></script>
+  <script src="js/Game.class.js"></script>
+  <script type="text/javascript">
+    var game = new Game({
+      timeDiff: 20,
+      canvasID: '#canvas',
+      width: 360,
+      height: 480
+    });
+  </script>
+</body>
+
+</html>

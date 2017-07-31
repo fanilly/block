@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/public.css">
+</head>
+
+<body>
+  <style type="text/css">
+	  #canvas {
+	    background: url(img/p_1.jpg) no-repeat center center;
+	  }
+  </style>
+  <canvas id="canvas" width="320" height="160"></canvas>
+  <script type="text/javascript">
+	  var canvas = document.querySelector('#canvas'),
+	    ctx = canvas.getContext('2d');
+	  ctx.beginPath();
+	  ctx.fillStyle = '#f0f0f0';
+	  ctx.fillRect(0, 0, 320, 160);
+	  ctx.closePath();
+	  ctx.globalCompositeOperation = "destination-out";
+	  canvas.addEventListener('mousedown', function() {
+	    var mouseMoveFn = function(e) {
+	      ctx.beginPath();
+	      ctx.fillStyle = 'rgba(0,0,0,1)';
+	      ctx.arc(e.pageX, e.pageY, 10, 0, 360);
+	      ctx.fill();
+	    }
+	    this.addEventListener('mousemove', mouseMoveFn)
+	    this.addEventListener('mouseup', function() {
+	      this.removeEventListener('mousemove', mouseMoveFn);
+	    })
+	  })
+  </script>
+</body>
+
+</html>
